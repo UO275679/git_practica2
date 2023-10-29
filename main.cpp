@@ -7,6 +7,7 @@
 using namespace std;
 
 int main() {
+    int num_iteraciones=0;
     double plantaNum[]={0,0.09508,-0.09045};
     double plantaDen[]={1,-1.851,0.86074};
     Vector num(plantaNum,3);
@@ -24,7 +25,8 @@ int main() {
     archivo <<"   k   xk      yk"<<endl;
 
     cout<<std::fixed;
-    for (int i= 0 ; i <20; i++)    {
+    cin >> num_iteraciones;
+    for (int i= 0 ; i <num_iteraciones; i++)    {
         yk=planta.obtenerSalidaFdt(xk);
         cout<<setw(4)<<i<< setprecision(1)<< setw(5)<< xk<< setprecision(6)<< setw(12)<<yk<<endl;
         archivo<<setw(4)<<i<< setprecision(1)<< setw(5)<< xk<< setprecision(6)<< setw(12)<<yk<<endl;
