@@ -8,6 +8,7 @@ using namespace std;
 
 int main() {
     int num_iteraciones=0;
+
     double plantaNum[]={0,0.09508,-0.09045};
     double plantaDen[]={1,-1.851,0.86074};
     Vector num(plantaNum,3);
@@ -25,6 +26,7 @@ int main() {
     archivo <<"   k   xk      yk"<<endl;
 
     cout<<std::fixed;
+    cout << "Introduzca numero de iteraciones" <<endl;
     cin >> num_iteraciones;
     for (int i= 0 ; i <num_iteraciones; i++)    {
         yk=planta.obtenerSalidaFdt(xk);
