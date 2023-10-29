@@ -1,0 +1,50 @@
+[1mdiff --git a/fdt.cpp b/fdt.cpp[m
+[1mindex c956a14..0e792da 100755[m
+[1m--- a/fdt.cpp[m
+[1m+++ b/fdt.cpp[m
+[36m@@ -10,16 +10,15 @@[m [mFdt::Fdt (Vector &num, Vector &den)   : num_(num),[m
+     factorInitial = den_.getPosValue(0);[m
+ }[m
+ [m
+[31m-Fdt::~Fdt() {[m
+[31m-}[m
+[31m-/*[m
+[32m+[m[32mFdt::~Fdt() {}[m
+[32m+[m
+ void Fdt::printFdt(void) {[m
+     cout<<"Numerador: ";[m
+     num_.printVector();[m
+     cout<<"Denominador: ";[m
+     den_.printVector();[m
+ }[m
+[31m-*/[m
+[32m+[m
+ double Fdt::obtenerSalidaFdt(double xk_p) {[m
+     double salida;[m
+     vectorYk_.shiftVector();[m
+[1mdiff --git a/fdt.h b/fdt.h[m
+[1mindex 41f0242..9ee58e5 100755[m
+[1m--- a/fdt.h[m
+[1m+++ b/fdt.h[m
+[36m@@ -7,7 +7,7 @@[m [mpublic:[m
+     Fdt (Vector &num, Vector &den);[m
+     ~Fdt();[m
+     double obtenerSalidaFdt(double xk_p);[m
+[31m- //   void printFdt(void);[m
+[32m+[m[32m    void printFdt(void);[m
+ private:[m
+     Vector num_;[m
+     Vector den_;[m
+[1mdiff --git a/vector.h b/vector.h[m
+[1mindex 764c852..ee53584 100755[m
+[1m--- a/vector.h[m
+[1m+++ b/vector.h[m
+[36m@@ -5,7 +5,7 @@[m [mclass Vector[m
+ {[m
+ public:[m
+     Vector(const double *, int );[m
+[31m-//    Vector(const Vector &vector);[m
+[32m+[m[32m// Vector(const Vector &vector);[m
+ [m
+     void shiftVector(void);[m
+     double productoEscalar(Vector mul2);[m
