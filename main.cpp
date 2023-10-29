@@ -13,7 +13,7 @@ int main() {
     Vector den(plantaDen,3);
     Fdt planta(num,den);
 
-  //  planta.printFdt();
+    planta.printFdt();
 
     double yk=0;
     double xk=1;
